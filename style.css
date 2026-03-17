@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif; /* lebih klasik */
+    background-color: #f4ecd8; /* krem */
+    color: #2d2d2d;
+    padding-top: 80px;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #3b2f2f; /* coklat tua */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 4px solid #6b8e23; /* hijau olive */
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.namaAwal {
+    color: #6b8e23;
+}
+
+.namaAkhir {
+    color: #f4ecd8;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* TITLE */
+.title {
+    grid-column: span 2;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6b8e23;
+    padding-bottom: 5px;
+}
+
+/* CARD */
+.card {
+    background: #fff8dc; /* warna kertas */
+    border: 2px solid #3b2f2f;
+    border-radius: 0; /* no rounded biar klasik */
+    overflow: hidden;
+}
+
+/* LINK */
+.card a {
+    text-decoration: none;
+    color: #3b2f2f;
+    display: block;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #3b2f2f;
+}
+
+/* TEXT */
+.card p {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* HOVER (simple aja, gak modern) */
+.card:hover {
+    background-color: #f0e6c8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        grid-column: span 1;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+}
+
